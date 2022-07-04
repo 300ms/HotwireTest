@@ -10,9 +10,9 @@
     <script src="~/dist/app.js" defer></script> <!-- We set the defer attribute on our script tag, which specifies that it will be downloaded in parallel to parsing the page, and executed after the page has finished parsing. -->
     <link rel="stylesheet" href="~/dist/app.css" />
 </head>
-<body class="p-4 bg-amber-100">
+<body class="p-4 bg-red-400">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-yellow-300 border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">HotwireTest</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -30,9 +30,9 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+	    <main role="main" class="p-3 custom-style-1 flex justify-items-center">
+		    @RenderBody()
+	    </main>
     </div>
     <!--<script src="~/lib/jquery/dist/jquery.min.js"></script>-->
     <!--<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
