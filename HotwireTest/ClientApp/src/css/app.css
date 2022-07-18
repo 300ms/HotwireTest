@@ -17,8 +17,24 @@
 @tailwind variants;
 
 @layer utilities {
-	.custom-style-1 {
-		@apply bg-red-100;
-		@apply shadow-lg;
+	.trapezoid {
+		text-align: center;
+		height: 0;
+		position: relative;
+		border-right: 20px solid transparent;
+		border-bottom: 40px solid #2963BD;
+		box-sizing: content-box;
+		width: 4rem;
+		margin-right: -1rem;
 	}
-};
+
+		.trapezoid span {
+			position: absolute;
+			left: 25%;
+			color: #fff;
+		}
+
+	.border-solid {
+		border: 2px solid black;
+	}
+}

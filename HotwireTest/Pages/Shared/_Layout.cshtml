@@ -1,42 +1,42 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HotwireTest</title>
-    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
-    <!--<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />-->
-    <!--<link rel="stylesheet" href="~/HotwireTest.styles.css" asp-append-version="true" />-->
-    <script src="~/dist/app.js" defer></script> <!-- We set the defer attribute on our script tag, which specifies that it will be downloaded in parallel to parsing the page, and executed after the page has finished parsing. -->
-    <link rel="stylesheet" href="~/dist/app.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - HotwireTest</title>
+	<!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
+	<!--<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />-->
+	<!--<link rel="stylesheet" href="~/HotwireTest.styles.css" asp-append-version="true" />-->
+	<script src="~/dist/app.js" defer></script> <!-- We set the defer attribute on our script tag, which specifies that it will be downloaded in parallel to parsing the page, and executed after the page has finished parsing. -->
+	<link rel="stylesheet" href="~/dist/app.css" />
 </head>
-<body class="p-4 bg-red-400">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-yellow-300 border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">HotwireTest</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-	    <main role="main" class="p-3 custom-style-1 flex justify-items-center">
-		    @RenderBody()
-	    </main>
-    </div>
-    <!--<script src="~/lib/jquery/dist/jquery.min.js"></script>-->
-    <!--<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!--<script src="~/js/site.js" asp-append-version="true"></script>-->
-    @await RenderSectionAsync("Scripts", required: false)
+<body class="w-screen flex-col flex  no-wrap justify-center px-8">
+	<header class="container sticky top-0 bg-sky-600 w-full py-2 px-4 max-w-none">
+		<nav class="navbar h-8 flex justify-between w-full">
+			<div class="flex w-1/2">
+				<a class="mr-2" asp-area="" asp-page="/Index">Home</a>
+				<a class="mr-2" asp-area="" asp-page="/Index">Products</a>
+				<a class="mr-2" asp-area="" asp-page="/Index">Company</a>
+				<a class="" asp-area="" asp-page="/Index">Blog</a>
+			</div>
+
+			<div class="flex w-1/2 justify-end">
+				<button class="relative" asp-area="" asp-page="/Index">
+					One
+					<span class="block absolute top-8 left-4 border-solid border-2 border-sky-500 w-24 text-sm">A Tooltip</span>
+				</button>
+				<button class="ml-2" asp-area="" asp-page="/Index">Two</button>
+				<button class="ml-2" asp-area="" asp-page="/Index">Three</button>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main" class="container mt-6 w-full max-w-none flex columns-4 gap-8 justify-between">
+		@RenderBody()
+	</main>
+	<!--<script src="~/lib/jquery/dist/jquery.min.js"></script>-->
+	<!--<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+	<!--<script src="~/js/site.js" asp-append-version="true"></script>-->
+	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
