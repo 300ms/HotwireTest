@@ -16,5 +16,25 @@ namespace HotwireTest.Pages
         {
 
         }
-    }
+
+        public PartialViewResult SectionOne()
+        {
+	        return Partial("_SectionOne", this);
+        }
+
+        public PartialViewResult SectionTwo()
+        {
+	        return Partial("_SectionTwo", this);
+        }
+
+        public PartialViewResult SectionThree()
+        {
+	        return Partial("_SectionThree", this);
+        }
+
+        public PartialViewResult SectionFour()
+        {
+	        return Partial("_SectionFour", this);
+        }
+	}
 }

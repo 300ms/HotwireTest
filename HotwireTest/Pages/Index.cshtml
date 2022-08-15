@@ -15,33 +15,15 @@
 <div class="w-1/2 h-auto p-12 flex-col flex border-solid">
 	<div class="relative bg-sky-300 h-full w-full">
 		<div class="absolute -top-14 left-16">
-			<button class="z-0 trapezoid" asp-area="" asp-page="/Index"><span>One</span></button>
-			<button class="z-10 trapezoid" asp-area="" asp-page="/Index"><span>Two</span></button>
-			<button class="z-20 trapezoid" asp-area="" asp-page="/Index"><span>Three</span></button>
-			<button class="z-30 trapezoid" asp-area="" asp-page="/Index"><span>Four</span></button>
+			<a class="z-0 trapezoid" asp-route-message="@Model.SectionOne()" asp-page="/SectionOne">One</a>
+			<a class="z-0 trapezoid" asp-route-message="@Model.SectionTwo()" asp-page="/SectionTwo">Two</a>
+			<a class="z-0 trapezoid" asp-route-message="@Model.SectionThree()" asp-page="/SectionThree">Three</a>
+			<a class="z-0 trapezoid" asp-route-message="@Model.SectionFour()" asp-page="/SectionFour">Four</a>
 		</div>
 
-		<div class="flex-col flex w-full h-full items-start p-16 justify-between">
-			<div class="flex-col flex w-full">
-				<label class="">ComboBox</label>
-				<select class="w-full">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-				</select>
-			</div>
-
-			<div class="flex-col flex w-full">
-				<label class="">ComboBox</label>
-
-				<textarea class="w-full"></textarea>
-			</div>
-
-			<div class="flex justify-end w-full">
-				<a class="mr-2" asp-area="" asp-page="/Index">Cancel</a>
-				<button class="w-16" asp-area="" asp-page="/Index"><span>Button</span></button>
-			</div>
-		</div>
+		<turbo-frame id="first-frame">
+			asd
+		</turbo-frame>
 	</div>
 </div>
 
