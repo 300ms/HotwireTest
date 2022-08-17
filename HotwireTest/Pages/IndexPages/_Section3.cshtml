@@ -1,0 +1,23 @@
+﻿@model HotwireTest.Pages.IndexModel
+
+<turbo-frame id="first-frame">
+	<div class="flex-col flex w-full">
+		<label class="">Section 3</label>
+		<select class="w-full">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+		</select>
+	</div>
+	
+	<div class="flex-col flex w-full">
+		<label class="">ComboBox</label>
+
+		<textarea class="w-full"></textarea>
+	</div>
+
+	<div class="flex justify-end w-full">
+		<a class="mr-2" asp-area="" asp-page="/Index">Cancel</a>
+		<button class="w-16" asp-area="" asp-page="/Index"><span>Button</span></button>
+	</div>
+</turbo-frame>

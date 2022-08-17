@@ -1,8 +1,6 @@
 ﻿@page
 @model IndexModel
-@{
-	ViewData["Title"] = "Home page";
-}
+
 
 <div class="w-1/6 h-auto p-4 flex-col flex border-solid">
 	<img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" class="w-full h-64" />
@@ -15,15 +13,20 @@
 <div class="w-1/2 h-auto p-12 flex-col flex border-solid">
 	<div class="relative bg-sky-300 h-full w-full">
 		<div class="absolute -top-14 left-16">
-			<a class="z-0 trapezoid" asp-route-message="@Model.SectionOne()" asp-page="/SectionOne">One</a>
-			<a class="z-0 trapezoid" asp-route-message="@Model.SectionTwo()" asp-page="/SectionTwo">Two</a>
-			<a class="z-0 trapezoid" asp-route-message="@Model.SectionThree()" asp-page="/SectionThree">Three</a>
-			<a class="z-0 trapezoid" asp-route-message="@Model.SectionFour()" asp-page="/SectionFour">Four</a>
+
+
+			<a class="z-0 trapezoid" asp-page-handler="SectionOne" asp-page="/Index" data-turbo-frame="first-frame">One</a>
+			<a class="z-0 trapezoid" asp-page-handler="SectionTwo" asp-page="/Index" data-turbo-frame="first-frame">Two</a>
+			<a class="z-0 trapezoid" asp-page-handler="SectionThree" asp-page="/Index" data-turbo-frame="first-frame">Three</a>
+			<a class="z-0 trapezoid" asp-page-handler="SectionFour" asp-page="/Index" data-turbo-frame="first-frame">Four</a>
 		</div>
 
 		<turbo-frame id="first-frame">
-			asd
+			<div>
+				<p> test</p>
+			</div>
 		</turbo-frame>
+
 	</div>
 </div>
 

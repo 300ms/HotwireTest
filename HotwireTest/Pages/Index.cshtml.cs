@@ -3,38 +3,38 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HotwireTest.Pages
 {
-    public class IndexModel : PageModel
-    {
-        private readonly ILogger<IndexModel> _logger;
+	public class IndexModel : PageModel
+	{
+		private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
-        {
-            _logger = logger;
-        }
+		public IndexModel(ILogger<IndexModel> logger)
+		{
+			_logger = logger;
+		}
 
-        public void OnGet()
-        {
+		public void OnGet()
+		{
 
-        }
+		}
 
-        public PartialViewResult SectionOne()
-        {
-	        return Partial("_SectionOne", this);
-        }
+		public PartialViewResult OnGetSectionOne()
+		{
+			return Partial("IndexPages/_Section1", this);
+		}
 
-        public PartialViewResult SectionTwo()
-        {
-	        return Partial("_SectionTwo", this);
-        }
+		public PartialViewResult OnGetSectionTwo()
+		{
+			return Partial("IndexPages/_Section2", this);
+		}
 
-        public PartialViewResult SectionThree()
-        {
-	        return Partial("_SectionThree", this);
-        }
+		public PartialViewResult OnGetSectionThree()
+		{
+			return Partial("IndexPages/_Section3", this);
+		}
 
-        public PartialViewResult SectionFour()
-        {
-	        return Partial("_SectionFour", this);
-        }
+		public PartialViewResult OnGetSectionFour()
+		{
+			return Partial("IndexPages/_Section4", this);
+		}
 	}
 }
