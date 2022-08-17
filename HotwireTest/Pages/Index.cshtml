@@ -12,18 +12,14 @@
 
 <div class="w-1/2 h-auto p-12 flex-col flex border-solid">
 	<div class="relative bg-sky-300 h-full w-full">
-		<div class="absolute -top-14 left-16">
-			<a class="z-0 trapezoid" asp-page-handler="SectionOne" asp-page="/Index" data-turbo-frame="first-frame">One</a>
-			<a class="z-0 trapezoid" asp-page-handler="SectionTwo" asp-page="/Index" data-turbo-frame="first-frame">Two</a>
-			<a class="z-0 trapezoid" asp-page-handler="SectionThree" asp-page="/Index" data-turbo-frame="first-frame">Three</a>
-			<a class="z-0 trapezoid" asp-page-handler="SectionFour" asp-page="/Index" data-turbo-frame="first-frame">Four</a>
+		<div class="absolute -top-10 left-16">
+			<a class="z-0 trapezoid" asp-page-handler="SectionOne" asp-page="/Index" data-turbo-frame="first-frame"><span>One</span></a>
+			<a class="z-0 trapezoid" asp-page-handler="SectionTwo" asp-page="/Index" data-turbo-frame="first-frame"><span>Two</span></a>
+			<a class="z-0 trapezoid" asp-page-handler="SectionThree" asp-page="/Index" data-turbo-frame="first-frame"><span>Three</span></a>
+			<a class="z-0 trapezoid" asp-page-handler="SectionFour" asp-page="/Index" data-turbo-frame="first-frame"><span>Four</span></a>
 		</div>
 
-		<turbo-frame id="first-frame">
-			<div>
-				<p> test</p>
-			</div>
-		</turbo-frame>
+		<partial name="IndexPages/_Section1" model="@Model"></partial>
 
 	</div>
 </div>

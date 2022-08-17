@@ -26,13 +26,8 @@
 		box-sizing: content-box;
 		width: 4rem;
 		margin-right: -1rem;
+		display: inline-block;
 	}
-
-		.trapezoid span {
-			position: absolute;
-			left: 25%;
-			color: #fff;
-		}
 
 	.border-solid {
 		border: 2px solid black;
